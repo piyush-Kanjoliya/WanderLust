@@ -1,0 +1,21 @@
+<% layout("/layouts/boilerplate") %>
+
+<div class="container text-center mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8 p-5 bg-light rounded-3 shadow-sm">
+            <h1 class="display-4 mb-4"><i class="fa-regular fa-compass text-danger"></i> Welcome to Wanderlust</h1>
+            <p class="lead mb-4">Find cozy beachfront cottages, modern downtown lofts, and unique getaway spaces around the globe.</p>
+            <hr class="my-4">
+            
+            <div class="d-grid gap-3 d-sm-flex justify-content-sm-center mt-4">
+                <% if(!currUser) { %>
+                    <a href="/login" class="btn btn-primary btn-lg px-4 gap-3">Log In</a>
+                    <a href="/signup" class="btn btn-outline-secondary btn-lg px-4">Sign Up</a>
+                <% } else { %>
+                    <a href="/logout" class="btn btn-danger btn-lg px-4">Log Out</a>
+                <% } %>
+                <!-- <a href="/listings" class="btn btn-success btn-lg px-4">Explore Listings Without Account</a> -->
+            </div>
+        </div>
+    </div>
+</div>
